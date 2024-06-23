@@ -50,9 +50,9 @@ read words
 # Check for valid social engineering words
 if [[ -z "$words" || "$words" =~ " " ]]; then
     echo -e "\e[31m [!] Invalid or empty words. Please avoid spaces.\e[0m"
-    echo -e "\e[1;33m [*] Generating Phish Mask Link...\n"
+    echo -e "\e[1;33m [*] Generating Masked Phishing Link...\n"
     final="$mask/$words@$shorter"
-    echo -e "Here is the PhishMasker URL:${final}"
+    echo -e "Here is the Masked Phishing URL:${final}"
     exit
 fi
 
