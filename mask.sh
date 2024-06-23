@@ -1,7 +1,6 @@
 #!/bin/bash
-figlet PhishMasker
-echo -e "by Tommaso Bona"
-echo -e "www.github.com/ParzivalHack"
+figlet Mask
+echo -e "www.github.com/ArunKBiju"
 # Function to check if the URL starts with http or https
 url_checker() {
     if [[ ! "${1}" =~ ^(http|https):// ]]; then
@@ -51,13 +50,13 @@ read words
 # Check for valid social engineering words
 if [[ -z "$words" || "$words" =~ " " ]]; then
     echo -e "\e[31m [!] Invalid or empty words. Please avoid spaces.\e[0m"
-    echo -e "\e[1;33m [*] Generating PhishMasker Link...\n"
+    echo -e "\e[1;33m [*] Generating Phish Mask Link...\n"
     final="$mask/$words@$shorter"
     echo -e "Here is the PhishMasker URL:${final}"
     exit
 fi
 
-echo -e "\e[1;33m [*] Generating PhishMasker Link...\n"
+echo -e "\e[1;33m [*] Generating PhishMasking Link...\n"
 shorter=${shorter#https://}
 final=$mask-$words@$shorter
-echo -e "\e[32m [+] Here is the PhishMasker URL: \e[35m ${final}"
+echo -e "\e[32m [+] Here is the masked URL: \e[35m ${final}"
